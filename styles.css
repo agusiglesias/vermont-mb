@@ -15,8 +15,13 @@ body{
     height: 100vh;
 }
 
+header{
+    display: grid;
+     grid-column: 1/2;
+}
+
 h1{
-    grid-column: 2/3;
+   
     font-size: 5.5vh;
     font-weight: 100;
     margin: 0 20px;
@@ -63,74 +68,41 @@ ul{
     padding-top: 10px;
 }
 
-@media only screen (min-width: 768px){
-    *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: "Helvetica",sans-serif;
-}
-.main{
-    width: 80%;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-template-rows: repeat(7,1fr);
-    height: 100vh;
-}
-
-h1{
-    font-size: 10vh;
-    font-weight: 100;
-    grid-column: 3/4;
-    line-height: 1.;
-    grid-row: 1/4;
-    margin: 0 20px;;
-}
-
-ul{
-    list-style: none;
-}
-
-.season{
-    grid-row: 4/5;
-    grid-column: 2/3;
-    font-size:3vh;
-    margin: 20px 20px;
-    font-weight: 100;
-}
-.concerts{
-    grid-row:4/7;
-    margin: 0 20px;
-    grid-column: 3/6;
-    display: flex;
-    justify-content: space-between;
-}
-
-.dates{
-    width: 45%;
-}
-
-.events ul{
-    padding: 5px 0;
-    margin: 5px 0;
-}
-
-
-.events ul li:nth-child(2){
-    font-weight: 600;
-}
-
-.name{
-    margin: 20px 0;
-    font-size: 20px;
-    font-weight: 100;
-}
-
-@media only screen and (min-width: 768px){
+@media only screen and (min-width:768px){
     .main{
-        display: none;
+        width: 80%;
+        margin: 20px auto;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(7,1fr);
+    }
+    
+    header{
+        grid-column: 3/6;
+        grid-row: 2/3;
+
+    }
+    
+    h1{
+        font-size: 10.5vh;
+        margin: 0 20px;
+        }
+    
+    .season{
+        grid-row: 4/5;
+    }
+    .concerts{
+        grid-column: 3/6;
+        grid-row: 4/7;
+        margin: 0 20px;
+        flex-direction: row;
+        justify-content: space-between;    
+    }
+    
+    .dates{
+        width: 45%;
+    }
+    
+    .name{
+        border: none;
     }
 }
